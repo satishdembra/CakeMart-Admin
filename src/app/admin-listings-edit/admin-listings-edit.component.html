@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="admin_container">
+      <div class="inside-container">
+        <div class="left-panel-main-container">
+          <img
+            src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+            class="dp-img"
+            alt=""
+          />
+          <p class="logo-txt">Hello, Admin</p>
+
+          <ul class="vertical-list">
+            <div>
+              <i class="fa-solid fa-chart-simple"></i>
+              Dashboard
+            </div>
+            <div routerLink="/admin-listings">
+              <i class="fa-solid fa-cubes"></i>Listings
+            </div>
+            <div><i class="fa-solid fa-cart-shopping"></i>Orders</div>
+            <div><i class="fa-solid fa-users"></i>Customers</div>
+            <div><i class="fa-solid fa-circle-info"></i>Help</div>
+          </ul>
+          <div class="logout-div">
+            <i class="fa-solid fa-circle-arrow-left"></i>Logout
+          </div>
+        </div>
+
+        <div class="right-panel-main-container">
+          <h1 class="admin-heading" style="padding-bottom: 2px;">All Listings</h1>
+          <p class="text-guide"><span class="hme" routerLink="/admin-listings">Product Home</span> > Edit </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

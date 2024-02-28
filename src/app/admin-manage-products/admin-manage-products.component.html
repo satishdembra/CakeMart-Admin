@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Product</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div *ngIf="isLoaded == false">
+      <!-- Content to show when condition is true -->
+      <img class="empty-img1" src="../../assets/skeleton-loading.gif" />
+    </div>
+
+    <section class="header-manage-product" *ngIf="isLoaded == true">
+      <h1 class="manage-product-head">MANAGE PRODUCTS</h1>
+      <div class="btn-top">
+        <button class="btn back-btn" routerLink="/admin-dashboard">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+        <button class="btn creat-btn" routerLink="/admin-create-products">
+          Create New
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="table-product-content" *ngIf="isLoaded == true">
+      <h3 class="all-product-head">All Products</h3>
+      <div *ngIf="products.length == 0 && isLoaded == true">
+        <!-- Content to show when condition is true -->
+        <img class="empty-img" src="../../assets/empty-search.gif" />
+
+        <h1 class="empty-list-head">No More Product Available</h1>
+        <h1 class="instruction-list-head" routerLink="/admin-dashboard">
+          Go Back To Home
+        </h1>
+      </div>
+
+      <div class="table-container" *ngFor="let product of products">
+        <img [src]="product.product_image" class="product-img" alt="" />
+        <div class="product-basic-detail-container">
+          <h1 class="product-head">{{ product.product_title }}</h1>
+          <p class="price-container">
+            <span class="price-txt"> Price: </span>
+            <span class="old-price-txt"
+              >{{ product.product_currency
+              }}{{ product.product_old_price }}</span
+            >
+            <span class="new-price-txt"
+              >{{ product.product_currency
+              }}{{ product.product_new_lesser_price }}</span
+            >
+          </p>
+        </div>
+
+        <div class="action-btn-container">
+          <button
+            class="btn action-btn btn-warning"
+            [routerLink]="['/admin-edit-product', product.product_id]"
+          >
+            <i class="fas fa-edit"></i> Edit
+          </button>
+
+          <button
+            class="btn action-btn btn-danger"
+            (click)="removeProduct(product.product_id)"
+          >
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="pagination" *ngIf="isLoaded == true">
+      <button
+        class="pagination-button"
+        (click)="handleButtonClick($event)"
+        [ngClass]="{ active: selectedButton == '1' }"
+        value="1"
+      >
+        1
+      </button>
+      <button
+        class="pagination-button"
+        (click)="handleButtonClick($event)"
+        [ngClass]="{ active: selectedButton == '2' }"
+        value="2"
+      >
+        2
+      </button>
+      <button
+        class="pagination-button"
+        (click)="handleButtonClick($event)"
+        [ngClass]="{ active: selectedButton == '3' }"
+        value="3"
+      >
+        3
+      </button>
+      <button
+        class="pagination-button"
+        (click)="handleButtonClick($event)"
+        [ngClass]="{ active: selectedButton == '4' }"
+        value="4"
+      >
+        4
+      </button>
+
+      <button
+        class="pagination-button"
+        (click)="handleButtonClick($event)"
+        [ngClass]="{ active: selectedButton == '5' }"
+        value="5"
+      >
+        5
+      </button>
+    </div>
+  </body>
+</html>

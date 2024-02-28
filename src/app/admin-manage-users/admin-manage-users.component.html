@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Product</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xrVYkxNMykr5Zz1vb8eRMH4lpEwu7kEw5q2Bn/kRMkhHeT6t+Qj00N9Bd2aPpOGjY7q5MrdHlMlv4bjTlRPlmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div *ngIf="isLoaded == false">
+      <!-- Content to show when condition is true -->
+      <img class="empty-img1" src="../../assets/skeleton-loading.gif" />
+    </div>
+
+    <section class="header-manage-product" *ngIf="isLoaded == true">
+      <h1 class="manage-product-head">MANAGE USERS</h1>
+      <div class="btn-top">
+        <button class="btn back-btn" routerLink="/admin-dashboard">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </section>
+
+    <div class="constrain" *ngIf="isLoaded == true">
+      <input
+        class="input-grey-rounded"
+        type="text"
+        placeholder="Search a User By User Name, Email or Role"
+        [(ngModel)]="filterString1"
+      />
+    </div>
+
+    <section class="table-product-content" *ngIf="isLoaded == true">
+      <h3 class="all-product-head">All Users</h3>
+
+      <div *ngIf="users.length == 0 && isLoaded == true">
+        <!-- Content to show when condition is true -->
+        <img class="empty-img" src="../../assets/empty-search.gif" />
+
+        <h1 class="empty-list-head">No More Users Available</h1>
+        <h1 class="instruction-list-head" routerLink="/admin-dashboard">
+          <!-- Go Back To Home -->
+        </h1>
+      </div>
+      <div *ngIf="isLoaded == true">
+        <div
+          class="table-container"
+          *ngFor="let user of users | searchPipe1 : filterString1"
+        >
+          <img [src]="user.image" class="product-img" alt="" />
+
+          <div class="product-basic-detail-container">
+            <p class="user-head">
+              User Name: <span class="user-detail">{{ user.user_name }}</span>
+            </p>
+            <p class="user-head">
+              Email Id:
+              <span class="user-detail"> {{ user.customer_email }}</span>
+            </p>
+            <p class="user-head">
+              Role: <span class="user-detail">{{ user.customer_role }}</span>
+            </p>
+            <p class="user-head">
+              Total Orders:
+              <span
+                class="user-detail"
+                *ngIf="user.number_of_orders_made == null"
+                >0</span
+              >
+            </p>
+            <p class="user-head" *ngIf="user.number_of_orders_made != null">
+              Total Orders:
+              <span class="user-detail">{{ user.number_of_orders_made }}</span>
+            </p>
+          </div>
+
+          <div class="action-btn-container">
+            <button
+              class="btn action-btn btn-danger"
+              (click)="removeUser(user.customer_id)"
+            >
+              <i class="fas fa-trash-alt"></i> Block User
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

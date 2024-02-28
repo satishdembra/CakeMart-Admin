@@ -1,0 +1,77 @@
+<div class="add-product-header">
+  <h1 class="add-head">EDIT PRODUCT</h1>
+  <button class="btn btn-primary back-btn" routerLink="/admin-manage-products">
+    <i class="fas fa-arrow-left" style="padding-right: 10px"></i>Back
+  </button>
+</div>
+<div class="container" style="padding-top: 2vh">
+  <legend style="color: #e5b63f; font-weight: bolder">Edit Product</legend>
+  <form>
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Product Name*</label>
+      <input
+        required
+        type="text"
+        name="product_title"
+        [(ngModel)]="productForm.product_title"
+        class="form-control"
+        id="txtName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Product Earlier Price*</label>
+      <input
+        required
+        type="text"
+        name="product_old_price"
+        [(ngModel)]="productForm.product_old_price"
+        class="form-control"
+        id="txtName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Product New Lesser Price*</label>
+      <input
+        required
+        type="text"
+        name="product_new_lesser_price"
+        [(ngModel)]="productForm.product_new_lesser_price"
+        class="form-control"
+        id="txtName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Product Image Link*</label>
+      <input
+        required
+        type="text"
+        name="product_image"
+        [(ngModel)]="productForm.product_image"
+        class="form-control"
+        id="txtName"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="txtName" class="form-label">Product Description*</label>
+
+      <textarea
+        type="text"
+        style="padding: 10px; line-height: 30px"
+        name="product_desc"
+        [(ngModel)]="productForm.product_desc"
+        class="form-control"
+        id="txtName"
+      ></textarea>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-warning"
+      (click)="updateProduct()"
+      style="color: #fff; font-weight: bold"
+    >
+      Edit Product
+    </button>
+  </form>
+</div>

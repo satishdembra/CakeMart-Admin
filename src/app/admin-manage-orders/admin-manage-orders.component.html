@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Product</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-xrVYkxNMykr5Zz1vb8eRMH4lpEwu7kEw5q2Bn/kRMkhHeT6t+Qj00N9Bd2aPpOGjY7q5MrdHlMlv4bjTlRPlmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div *ngIf="isLoaded == false">
+      <img class="empty-img1" src="../../assets/skeleton-loading.gif" />
+    </div>
+
+    <section class="header-manage-product" *ngIf="isLoaded == true">
+      <h1 class="manage-product-head">MANAGE ORDERS</h1>
+      <div class="btn-top">
+        <button class="btn back-btn" routerLink="/admin-dashboard">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </section>
+
+    <div class="constrain" *ngIf="isLoaded == true">
+      <input
+        class="input-grey-rounded"
+        type="text"
+        placeholder="Search Order By Product Name, User Name, Email, Price"
+        [(ngModel)]="filterString2"
+      />
+    </div>
+
+    <section class="table-product-content" *ngIf="isLoaded == true">
+      <h3 class="all-product-head">All Orders</h3>
+      <div *ngIf="orders.length == 0 && isLoaded == true">
+        <!-- Content to show when condition is true -->
+        <img class="empty-img" src="../../assets/empty-search.gif" />
+
+        <h1 class="empty-list-head">No Orders Available</h1>
+        <h1 class="instruction-list-head" routerLink="/admin-dashboard">
+          <!-- Go Back To Home -->
+        </h1>
+      </div>
+      <div
+        class="table-container"
+        *ngFor="let order of orders | searchPipe2 : filterString2"
+      >
+        <img [src]="order.product_image" class="product-img" alt="" />
+
+        <div class="inner_container">
+          <div class="product-basic-detail-container">
+            <p class="user-head">
+              Product Title:
+              <span class="user-detail">{{ order.product_title }}</span>
+            </p>
+            <p class="user-head">
+              Qty:
+              <span class="user-detail"> {{ order.qty }}</span>
+            </p>
+            <p class="user-head">
+              Price Paid:
+              <span class="user-detail">{{ order.price_paid }}</span>
+            </p>
+          </div>
+          <div>
+            <p class="user-head">
+              Ordered By:
+              <span class="user-detail">{{ order.ordered_by }}</span>
+            </p>
+            <p class="user-head">
+              Ordered From Mail:
+              <span class="user-detail">{{ order.ordered_by_mail }}</span>
+            </p>
+            <p class="user-head">
+              Ordered On:
+              <span class="user-detail">{{ order.order_date }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

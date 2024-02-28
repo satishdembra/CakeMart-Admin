@@ -1,0 +1,29 @@
+.add-product-header {
+  text-align: center;
+}
+.add-head {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.back-btn {
+  width: 7%;
+  padding: 5px;
+  font-weight: bold;
+}
+label {
+  color: #707070;
+}
+input {
+  border-color: #bdbdbd;
+  border-width: 1px;
+}
+textarea {
+  border-color: #bdbdbd;
+  border-width: 1px;
+  height: 150px;
+}
+
+form {
+  margin-bottom: 5vh;
+}

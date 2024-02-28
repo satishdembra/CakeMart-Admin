@@ -1,0 +1,42 @@
+<div class="admin_container">
+  <div class="inside-container">
+
+  <h3 class="mgmt-txt">
+    Admin Dashboard
+    <span style="margin-left: 2vw" class="btn btn-danger" (click)="logout()"
+      >Logout</span
+    >
+  </h3>
+  <div class="admin_cards_container">
+    <div class="card_items">
+      <a routerLink="/admin-manage-products" class="nav-link active">
+        <img
+          src="../../assets/manage-products.svg"
+          alt=""
+          class="img-content"
+        />
+        <p class="btn btn-category">Manage Products</p>
+      </a>
+    </div>
+    <div class="card_items">
+      <a routerLink="/admin-manage-users" class="nav-link active">
+        <img src="../../assets/manage-users.svg" alt="" class="img-content" />
+        <p class="btn btn-category">Manage Users</p>
+      </a>
+    </div>
+    <div class="card_items">
+      <a routerLink="/admin-manage-orders" class="nav-link active">
+        <img
+          src="../../assets/manage-orders.svg"
+          alt=""
+          width="85%"
+          height="85%"
+        />
+        <p class="btn btn-category">View Orders</p>
+      </a>
+    </div>
+  </div>
+   
+  </div>
+
+</div>

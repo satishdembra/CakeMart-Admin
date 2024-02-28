@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="admin_container">
+      <div class="inside-container">
+        <div class="left-panel-main-container">
+          <img
+            src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+            class="dp-img"
+            alt=""
+          />
+          <p class="logo-txt">Hello, Admin</p>
+
+          <ul class="vertical-list">
+            <div>
+              <i class="fa-solid fa-chart-simple"></i>
+              Dashboard
+            </div>
+            <div routerLink="/admin-listings">
+              <i class="fa-solid fa-cubes"></i>Listings
+            </div>
+            <div><i class="fa-solid fa-cart-shopping"></i>Orders</div>
+            <div><i class="fa-solid fa-users"></i>Customers</div>
+            <div><i class="fa-solid fa-circle-info"></i>Help</div>
+          </ul>
+          <div class="logout-div">
+            <i class="fa-solid fa-circle-arrow-left"></i>Logout
+          </div>
+        </div>
+
+        <div class="right-panel-main-container">
+          <h1 class="admin-heading">Admin Dashboard</h1>
+
+          <div class="row1-main">
+            <div class="ctr-left-div-main">
+              <div style="padding-bottom: 2vh">
+                <div class="first-card">50 Orders</div>
+                <div class="second-card">50 prducts</div>
+              </div>
+              <div>
+                <div class="third-card">50 users</div>
+                <div class="fourth-card">50 sales</div>
+              </div>
+            </div>
+            <div class="ctr-right-div-main">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+
+          <div class="second-row">
+            <div class="pieChart">
+              <canvas id="myPieChart"></canvas>
+            </div>
+
+            <div class="second-second-row">
+              <table class="order-container">
+                <tr class="tr1">
+                  <td class="td1">P Code</td>
+                  <td>Name</td>
+                  <td>Orders</td>
+                  <td>Created</td>
+                </tr>
+                <tr class="tr2">
+                  <td class="td1">111</td>
+
+                  <td class="token-td">22</td>
+                  <td>sfasdf</td>
+
+                  <td>asf</td>
+                </tr>
+                <tr class="tr2">
+                  <td class="td1">111</td>
+
+                  <td class="token-td">22</td>
+                  <td>sfasdf</td>
+
+                  <td>asf</td>
+                </tr>
+                <tr class="tr2">
+                  <td class="td1">111</td>
+
+                  <td class="token-td">22</td>
+                  <td>sfasdf</td>
+
+                  <td>asf</td>
+                </tr>
+                <tr class="tr2">
+                  <td class="td1">111</td>
+
+                  <td class="token-td">22</td>
+                  <td>sfasdf</td>
+
+                  <td>asf</td>
+                </tr>
+                <tr class="tr2">
+                  <td class="td1">111</td>
+
+                  <td class="token-td">22</td>
+                  <td>sfasdf</td>
+
+                  <td>asf</td>
+                </tr>
+              </table>
+            </div>
+            <div class="third-second-row">
+              <p class="recent-user">Recent Users</p>
+              <div class="img-div">
+                <img
+                  src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+                  class="img-user"
+                />
+                <div class="img-side">
+                  <p class="img-head-txt">Ayyan</p>
+                  <p class="emai">mdayyanfahim@gmaicm</p>
+                </div>
+              </div>
+
+              <div class="img-div">
+                <img
+                  src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+                  class="img-user"
+                />
+                <div class="img-side">
+                  <p class="img-head-txt">Ayyan</p>
+                  <p class="emai">mdayyanfahim@gmaicm</p>
+                </div>
+              </div>
+
+
+              <div class="img-div">
+                <img
+                  src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+                  class="img-user"
+                />
+                <div class="img-side">
+                  <p class="img-head-txt">Ayyan</p>
+                  <p class="emai">mdayyanfahim@gmaicm</p>
+                </div>
+              </div>
+
+              <div class="img-div">
+                <img
+                  src="https://media.licdn.com/dms/image/D5603AQE0Ytnb_3YwKA/profile-displayphoto-shrink_800_800/0/1673701666748?e=1696464000&v=beta&t=KcfrXgg2mcWk2zPFZsgn3FgKZ7bRa8kJSHlBXciD0iM"
+                  class="img-user"
+                />
+                <div class="img-side">
+                  <p class="img-head-txt">Ayyan</p>
+                  <p class="emai">mdayyanfahim@gmaicm</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

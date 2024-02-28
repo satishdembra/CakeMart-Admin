@@ -1,0 +1,181 @@
+.back-btn {
+  background-color: #1266f1;
+  color: #fff;
+  margin-right: 1%;
+  font-weight: bold;
+}
+
+.empty-img1 {
+  display: flex;
+  width: 30%;
+  height: 30%;
+  margin: 0 auto;
+}
+.header-manage-product {
+  text-align: center;
+}
+h1 {
+  font-size: 35px;
+}
+i {
+  padding: 0 7px;
+}
+.constrain {
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-grey-rounded {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f4f4f4;
+  border: 1px solid #d5d9db;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%238C92A0' d='M11.44 10.73l4.41 4.42a.5.5 0 1 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.7v-.01zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  background-size: 20px 20px;
+  border-radius: 100px;
+  width: 500px;
+  padding: 0.5em 1em 0.5em 2.5em;
+}
+
+.input-grey-rounded::placeholder {
+  color: #838d99;
+}
+
+.input-grey-rounded:focus {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #84a2fa;
+}
+
+.product-img {
+  width: 10%;
+  height: 10%;
+}
+.table-container {
+  padding: 1% 8%;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #707070;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+.product-head {
+  font-size: 25px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.manage-product-head {
+  font-weight: bold;
+  padding: 1%;
+}
+.all-product-head {
+  padding-left: 10vw;
+  color: #707070;
+  font-weight: bold;
+  font-size: 30px;
+}
+.old-price-txt {
+  text-decoration: line-through;
+  padding-right: 5px;
+  font-size: 22px;
+  color: #707070;
+}
+.price-container {
+  margin-bottom: 0;
+}
+.price-txt {
+  font-weight: bold;
+  color: #707070;
+}
+.product-row {
+  position: relative;
+}
+
+.new-price-txt {
+  font-weight: bold;
+  font-size: 25px;
+  color: #707070;
+}
+.action-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1%;
+  padding-left: 32%;
+}
+
+.action-btn {
+  font-size: 17px;
+  margin-right: 3px;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination-button {
+  padding: 5px 15px;
+  margin-right: 5px;
+  margin-bottom: 5vh;
+  background-color: #ddd;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #bbb;
+  transform: scale(1.3);
+}
+
+.pagination-button.active {
+  background-color: #00b74a;
+  color: #fff;
+}
+
+.empty-img {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  height: 10%;
+  margin-top: 8vh;
+}
+.empty-list-head {
+  text-align: center;
+  font-weight: bold;
+  color: #707070;
+  font-size: 22px;
+}
+.instruction-list-head {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10vh;
+  color: red;
+  cursor: pointer;
+}
+.user-head {
+  color: #707070;
+  font-weight: bold;
+  line-height: 17px;
+}
+.user-detail {
+  font-weight: normal;
+}
+
+.inner_container {
+  display: flex;
+}
+.inner_container div {
+  padding-right: 1vw;
+}
